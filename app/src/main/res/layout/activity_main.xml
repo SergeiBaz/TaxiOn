@@ -42,4 +42,13 @@
         app:layout_constraintEnd_toEndOf="@+id/editTextStreetFrom"
         app:layout_constraintStart_toStartOf="@+id/editTextStreetFrom"
         app:layout_constraintTop_toBottomOf="@+id/editTextStreetFrom" />
+
+    <TextView
+        android:id="@+id/textViewRendering"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/createAuctionButton"
+        app:layout_constraintStart_toStartOf="@+id/createAuctionButton"
+        app:layout_constraintTop_toBottomOf="@+id/createAuctionButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>

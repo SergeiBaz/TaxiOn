@@ -4,7 +4,7 @@ import android.content.Context
 import com.example.service.CreateAuctionUseCase
 import dagger.Module
 import dagger.Provides
-import data.repositories.AuctionsRepository
+import di.repositories.AuctionsRepository
 
 
 @Module
