@@ -1,9 +1,9 @@
 package di
 
-import com.example.taxion.MainActivity
+import presentation.MainActivity
 import dagger.Component
 
-@Component(modules = [ServiceModule::class, RetrofitModule::class])
+@Component(modules = [ServiceModule::class, RetrofitModule::class, AppModule::class])
 interface AppComponent {
     fun inject(mainActivity: MainActivity)
 }

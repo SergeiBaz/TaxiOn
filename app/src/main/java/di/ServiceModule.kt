@@ -1,10 +1,10 @@
 package di
 
 import android.content.Context
-import com.example.service.CreateAuctionUseCase
+import com.example.domain.useCases.CreateAuctionUseCase
 import dagger.Module
 import dagger.Provides
-import di.repositories.AuctionsRepository
+import com.example.data.repositories.AuctionsRepository
 
 
 @Module

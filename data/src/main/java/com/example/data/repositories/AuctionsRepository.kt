@@ -1,12 +1,11 @@
-package di.repositories
+package com.example.data.repositories
 
-import com.example.domain.Auction
-import com.example.service.AuctionsRepository
-import data.dataSources.AuctionsRemoteDataSource
+import com.example.domain.entities.Auction
+import com.example.domain.repositories.AuctionsRepository
 import javax.inject.Inject
 
 class AuctionsRepository @Inject constructor(
-    private val auctionsRemoteDataSource: AuctionsRemoteDataSource
+    private val auctionsRemoteDataSource: com.example.data.dataSources.AuctionsRemoteDataSource
 ) : AuctionsRepository {
     override suspend fun createAuction(auction: Auction): Auction? {
         return auctionsRemoteDataSource.createAuction(auction)

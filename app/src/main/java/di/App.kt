@@ -1,4 +1,4 @@
-package di.app
+package di
 
 import android.app.Application
 import di.AppComponent

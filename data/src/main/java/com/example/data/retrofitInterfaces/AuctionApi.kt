@@ -1,6 +1,6 @@
-package data.retrofitInterfaces
+package com.example.data.retrofitInterfaces
 
-import com.example.domain.Auction
+import com.example.domain.entities.Auction
 import okhttp3.RequestBody
 import retrofit2.Response
 import retrofit2.http.Body

@@ -1,12 +1,12 @@
-package data.dataSources
+package com.example.data.dataSources
 
-import com.example.domain.Auction
+import com.example.data.models.CreateAuctionRequestModel
+import com.example.data.retrofitInterfaces.AuctionApi
+import com.example.domain.entities.Auction
 import com.google.gson.Gson
-import data.models.CreateAuctionRequestModel
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Retrofit
-import data.retrofitInterfaces.AuctionApi
 import okhttp3.RequestBody
 import javax.inject.Inject
 

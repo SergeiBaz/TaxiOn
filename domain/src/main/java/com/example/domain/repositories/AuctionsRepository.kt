@@ -1,6 +1,6 @@
-package com.example.service
+package com.example.domain.repositories
 
-import com.example.domain.Auction
+import com.example.domain.entities.Auction
 
 interface AuctionsRepository {
     suspend fun createAuction(auction: Auction): Auction?

@@ -14,5 +14,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "TaxiOn"
 include ':app'
-include ':service'
 include ':domain'
+include ':data'
