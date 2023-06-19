@@ -1,6 +1,6 @@
 package di
 
-import presentation.MainActivity
+import presentation.activity.MainActivity
 import dagger.Component
 
 @Component(modules = [ServiceModule::class, RetrofitModule::class, AppModule::class])
