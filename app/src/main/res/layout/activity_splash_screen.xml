@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context="presentation.activity.SplashScreenActivity">
 
+    <FrameLayout
+        android:id="@+id/place_holder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
@@ -29,4 +40,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:progressTint="@color/color_progressBar"
         app:layout_constraintStart_toStartOf="@+id/imageView" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

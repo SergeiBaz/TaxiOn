@@ -1,14 +1,16 @@
 package presentation.activity
 
 import android.animation.ObjectAnimator
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import com.example.taxion.R
 import com.example.taxion.databinding.ActivitySplashScreenBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import presentation.fragments.UserChoiceFragment
 
 class SplashScreenActivity : AppCompatActivity() {
 
@@ -23,7 +25,16 @@ class SplashScreenActivity : AppCompatActivity() {
             ObjectAnimator.ofInt(binding.progressBar, "progress", 1000)
                 .setDuration(3000).start()
             delay(3000)
-            startActivity(Intent(this@SplashScreenActivity, MainActivity::class.java))
+            binding.apply {
+                imageView.visibility = View.GONE
+                progressBar.visibility = View.GONE
+            }
+            supportFragmentManager
+                .beginTransaction()
+                .replace(
+                    R.id.place_holder,
+                    UserChoiceFragment.newInstance())
+                .commit()
         }
     }
 }
