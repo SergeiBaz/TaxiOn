@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="presentation.fragments.SplashScreenFragment">
+    <Button
+        android:id="@+id/createAuctionButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Create Auction"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStreetTo"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="@+id/editTextStreetTo"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStreetTo" />
+
+    <EditText
+        android:id="@+id/editTextStreetFrom"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:ems="11"
+        android:hint="Введите точку подачу"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextStreetTo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="11"
+        android:hint="Введите конечную точку"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextStreetFrom"
+        app:layout_constraintStart_toStartOf="@+id/editTextStreetFrom"
+        app:layout_constraintTop_toBottomOf="@+id/editTextStreetFrom" />
+
+    <TextView
+        android:id="@+id/textViewRendering"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        app:layout_constraintEnd_toEndOf="@+id/createAuctionButton"
+        app:layout_constraintStart_toStartOf="@+id/createAuctionButton"
+        app:layout_constraintTop_toBottomOf="@+id/createAuctionButton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

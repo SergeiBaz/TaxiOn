@@ -5,9 +5,15 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.domain.useCases.CreateAuctionUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
+import javax.inject.Inject
 
-class CreateAuctionViewModel(private val createAuctionUseCase: CreateAuctionUseCase) : ViewModel() {
+@HiltViewModel
+class CreateAuctionViewModel @Inject constructor
+    (
+    private val createAuctionUseCase: CreateAuctionUseCase)
+    : ViewModel() {
     private val _uiState = MutableLiveData<String>()
     val uiState: LiveData<String> = _uiState
 

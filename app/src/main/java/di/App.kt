@@ -1,17 +1,20 @@
 package di
 
 import android.app.Application
-import di.AppComponent
-import di.DaggerAppComponent
-import di.ServiceModule
+import android.content.Context
+import dagger.hilt.android.HiltAndroidApp
 
-class App : Application() {
+@HiltAndroidApp
+class App : Application() /*{
 
-    lateinit var appComponent: AppComponent
+*//*    lateinit var appComponent: AppComponent*//*
 
-    override fun onCreate() {
-        super.onCreate()
+*//*    override fun onCreate() {
+        super.onCreate()*//*
 
-        appComponent = DaggerAppComponent.builder().serviceModule(ServiceModule(this)).build()
+    *//*appComponent = DaggerAppComponent
+            .builder()
+            .serviceModule(ServiceModule(this))
+            .build()*//*
     }
-}
+}*/

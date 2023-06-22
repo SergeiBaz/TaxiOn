@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.taxion.R
 import com.example.taxion.databinding.FragmentUserChoiceBinding
 
@@ -14,14 +15,17 @@ class UserChoiceFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         binding = FragmentUserChoiceBinding
             .inflate(inflater, container, false)
         return binding.root
     }
 
-    companion object {
-        @JvmStatic
-        fun newInstance() = UserChoiceFragment()
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val controller = findNavController()
+        binding.ButtonPassenger.setOnClickListener {
+            controller.navigate(R.id.splashScreenFragment)
+        }
     }
 }
