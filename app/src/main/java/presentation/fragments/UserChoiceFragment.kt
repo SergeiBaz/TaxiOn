@@ -24,8 +24,13 @@ class UserChoiceFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val controller = findNavController()
-        binding.ButtonPassenger.setOnClickListener {
-            controller.navigate(R.id.splashScreenFragment)
+        binding.apply {
+            ButtonPassenger.setOnClickListener {
+                controller.navigate(R.id.splashScreenFragment)
+            }
+            ButtonDriver.setOnClickListener {
+                controller.navigate(R.id.loginFragment)
+            }
         }
     }
 }

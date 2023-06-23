@@ -6,20 +6,20 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.taxion.databinding.FragmentSplashScreenBinding
+import com.example.taxion.databinding.FragmentCreateAuctionBinding
 import dagger.hilt.android.AndroidEntryPoint
 import presentation.viewModels.CreateAuctionViewModel
 
 @AndroidEntryPoint
-class SplashScreenFragment : Fragment() {
-    private lateinit var binding: FragmentSplashScreenBinding
+class CreateAuctionFragment : Fragment() {
+    private lateinit var binding: FragmentCreateAuctionBinding
     private val viewModel by viewModels<CreateAuctionViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding = FragmentSplashScreenBinding
+        binding = FragmentCreateAuctionBinding
             .inflate(inflater, container, false)
         return binding.root
     }
