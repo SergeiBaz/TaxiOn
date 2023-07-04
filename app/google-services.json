@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "303513565634",
+    "project_id": "taxion-c8204",
+    "storage_bucket": "taxion-c8204.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:303513565634:android:01b14f8da81d224360be5b",
+        "android_client_info": {
+          "package_name": "com.example.taxion"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "303513565634-7f5bmn931uhf1j2lhn2lhbjpbqdthd6i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.taxion",
+            "certificate_hash": "58b274784ffae13f0ad3d8ae2cbf640ce9fc72bf"
+          }
+        },
+        {
+          "client_id": "303513565634-318h24c90f4lt7qubl0n8cccci4o9ftd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyABDGlDVOUcbQBEiPYGrNzodhyF0ekq9Zw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "303513565634-318h24c90f4lt7qubl0n8cccci4o9ftd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

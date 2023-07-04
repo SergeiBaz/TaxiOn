@@ -12,8 +12,8 @@ import javax.inject.Inject
 @HiltViewModel
 class CreateAuctionViewModel @Inject constructor
     (
-    private val createAuctionUseCase: CreateAuctionUseCase)
-    : ViewModel() {
+    private val createAuctionUseCase: CreateAuctionUseCase
+    ) : ViewModel() {
     private val _uiState = MutableLiveData<String>()
     val uiState: LiveData<String> = _uiState
 

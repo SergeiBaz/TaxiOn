@@ -11,8 +11,8 @@ import okhttp3.RequestBody
 import javax.inject.Inject
 
 class AuctionsRemoteDataSource @Inject constructor(
-    private val retrofit: Retrofit,
-    ) {
+    retrofit: Retrofit,
+) {
     private val auctionApi: AuctionApi = retrofit.create(AuctionApi::class.java)
     private val gson = Gson()
 

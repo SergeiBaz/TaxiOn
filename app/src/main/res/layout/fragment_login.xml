@@ -7,7 +7,7 @@
     tools:context="presentation.fragments.LoginFragment">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imageViewFon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:scaleType="fitXY"
@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/email_et"
+        android:id="@+id/login_et"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -27,7 +27,7 @@
         android:background="@drawable/black_white_rect_bg"
         android:ems="10"
         android:fontFamily="@font/titillium_web_regular"
-        android:hint="Login or Phone"
+        android:hint="Логин или Телефон"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toTopOf="@+id/pass_et"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageViewFon"
         tools:ignore="TextSizeCheck" />
 
     <EditText
@@ -45,15 +45,15 @@
         android:layout_marginBottom="20dp"
         android:background="@drawable/black_white_rect_bg"
         android:fontFamily="@font/titillium_web_regular"
-        android:hint="Password"
+        android:hint="Пароль"
         android:inputType="textPassword"
         android:minHeight="48dp"
         android:textColor="@color/black"
         android:textSize="14dp"
         app:layout_constraintBottom_toTopOf="@+id/forgot_pass_label"
-        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintEnd_toEndOf="@+id/login_et"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/email_et"
+        app:layout_constraintStart_toStartOf="@+id/login_et"
         tools:ignore="TextSizeCheck" />
 
     <com.google.android.material.button.MaterialButton
@@ -100,9 +100,9 @@
         android:textIsSelectable="false"
         android:textSize="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintEnd_toEndOf="@+id/login_et"
         app:layout_constraintHorizontal_bias="0.07"
-        app:layout_constraintStart_toStartOf="@+id/email_et" />
+        app:layout_constraintStart_toStartOf="@+id/login_et" />
 
     <RelativeLayout
         android:id="@+id/button_layout"
@@ -110,9 +110,9 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
         app:layout_constraintBottom_toTopOf="@+id/register_label"
-        app:layout_constraintEnd_toEndOf="@+id/email_et"
+        app:layout_constraintEnd_toEndOf="@+id/login_et"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/email_et">
+        app:layout_constraintStart_toStartOf="@+id/login_et">
 
         <ProgressBar
             android:id="@+id/login_progress"
