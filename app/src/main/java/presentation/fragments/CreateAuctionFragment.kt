@@ -25,6 +25,7 @@ class CreateAuctionFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val list = ArrayList<String>()
         viewModel.uiState.observe(this) {
             binding.textViewRendering.text = it
         }

@@ -1,5 +1,6 @@
 package com.example.data.dataSources
 
+import com.example.data.models.AddCandidateRequestModel
 import com.example.data.models.CreateAuctionRequestModel
 import com.example.data.retrofitInterfaces.AuctionApi
 import com.example.domain.entities.Auction
@@ -23,5 +24,10 @@ class AuctionsRemoteDataSource @Inject constructor(
     suspend fun createAuction(auction: Auction): Auction? {
         val model = CreateAuctionRequestModel(auction.from.street, auction.to.street)
         return auctionApi.createAuction(createRequestBody(model)).body()
+    }
+
+    suspend fun addCandidate(auctionId: Int, userId: Int): Auction?{
+        val model = AddCandidateRequestModel(userId)
+        return auctionApi.addCandidate(auctionId, createRequestBody(model)).body()
     }
 }

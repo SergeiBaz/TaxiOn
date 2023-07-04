@@ -10,4 +10,12 @@ class AuctionsRepository @Inject constructor(
     override suspend fun createAuction(auction: Auction): Auction? {
         return auctionsRemoteDataSource.createAuction(auction)
     }
+
+    override suspend fun getAuction(id: Int): Auction? {
+        TODO("Not yet implemented")
+    }
+
+    override suspend fun addCandidate(auctionId: Int, userId: Int): Auction? {
+        return auctionsRemoteDataSource.addCandidate(auctionId, userId)
+    }
 }

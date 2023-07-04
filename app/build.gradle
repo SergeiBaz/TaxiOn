@@ -9,12 +9,12 @@ plugins {
 
 android {
     namespace 'com.example.taxion'
-    compileSdk 33
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.example.taxion"
         minSdk 19
-        targetSdk 33
+        targetSdk 34
         versionCode 1
         versionName "1.0"
         viewBinding.enabled true
@@ -40,8 +40,8 @@ android {
 }
 
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:32.1.1')
-    implementation 'com.google.firebase:firebase-auth-ktx'
+   /* implementation platform('com.google.firebase:firebase-bom:32.1.1')
+    implementation 'com.google.firebase:firebase-auth-ktx'*/
 
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
