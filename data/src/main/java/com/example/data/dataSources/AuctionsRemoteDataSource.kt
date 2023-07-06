@@ -1,5 +1,6 @@
 package com.example.data.dataSources
 
+import android.util.Log
 import com.example.data.models.AddCandidateRequestModel
 import com.example.data.models.CreateAuctionRequestModel
 import com.example.data.retrofitInterfaces.AuctionApi
@@ -9,11 +10,12 @@ import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.RequestBody.Companion.toRequestBody
 import retrofit2.Retrofit
 import okhttp3.RequestBody
+import retrofit2.Response
 import javax.inject.Inject
 
 class AuctionsRemoteDataSource @Inject constructor(
     private val retrofit: Retrofit,
-    ) {
+) {
     private val auctionApi: AuctionApi = retrofit.create(AuctionApi::class.java)
     private val gson = Gson()
 
@@ -26,8 +28,17 @@ class AuctionsRemoteDataSource @Inject constructor(
         return auctionApi.createAuction(createRequestBody(model)).body()
     }
 
-    suspend fun addCandidate(auctionId: Int, userId: Int): Auction?{
+    suspend fun getAuction(auctionId: Int): Auction? {
+        val auction = auctionApi.getAuction(auctionId).body()
+        return auction
+    }
+
+    suspend fun addCandidate(auctionId: Int, userId: Int): Auction? {
         val model = AddCandidateRequestModel(userId)
         return auctionApi.addCandidate(auctionId, createRequestBody(model)).body()
+    }
+
+    suspend fun getAuctionsModelArray(): List<Auction> {
+        return auctionApi.getAuctionsModelArray().body()!!
     }
 }

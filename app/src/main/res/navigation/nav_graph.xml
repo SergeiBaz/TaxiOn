@@ -30,6 +30,9 @@
         <action
             android:id="@+id/action_userChoiceFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_userChoiceFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
@@ -41,4 +44,14 @@
         android:name="presentation.fragments.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/auctionFragment"
+        android:name="presentation.fragments.AuctionFragment"
+        android:label="fragment_auction"
+        tools:layout="@layout/fragment_auction" />
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="presentation.fragments.LobbyFragment"
+        android:label="fragment_lobby"
+        tools:layout="@layout/fragment_lobby" />
 </navigation>

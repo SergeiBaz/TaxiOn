@@ -1,5 +1,4 @@
 package com.example.data.repositories
-
 import com.example.domain.entities.Auction
 import com.example.domain.repositories.AuctionsRepository
 import javax.inject.Inject
@@ -12,10 +11,16 @@ class AuctionsRepository @Inject constructor(
     }
 
     override suspend fun getAuction(id: Int): Auction? {
-        TODO("Not yet implemented")
+        return auctionsRemoteDataSource.getAuction(id)
     }
 
     override suspend fun addCandidate(auctionId: Int, userId: Int): Auction? {
         return auctionsRemoteDataSource.addCandidate(auctionId, userId)
     }
+
+    override suspend fun getAuctionsArray(): List<Auction> {
+        return auctionsRemoteDataSource.getAuctionsModelArray()
+    }
+
+
 }

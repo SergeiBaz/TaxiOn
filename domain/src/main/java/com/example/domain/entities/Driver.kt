@@ -1,4 +1,4 @@
 package com.example.domain.entities
 
-class Driver(user: User) {
+class Driver(val user: User) {
 }
