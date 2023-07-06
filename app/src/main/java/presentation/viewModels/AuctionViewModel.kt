@@ -36,7 +36,7 @@ class AuctionViewModel @Inject constructor(
     }
 
     fun getArrayAuctions() {
-       viewModelScope.launch {
+        viewModelScope.launch {
             val arrayAuctions = getArrayAuctionsUseCase()
             withContext(Dispatchers.Main) {
                 _idState.value = arrayAuctions
