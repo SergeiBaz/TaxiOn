@@ -53,5 +53,9 @@
         android:id="@+id/lobbyFragment"
         android:name="presentation.fragments.LobbyFragment"
         android:label="fragment_lobby"
-        tools:layout="@layout/fragment_lobby" />
+        tools:layout="@layout/fragment_lobby" >
+        <action
+            android:id="@+id/action_lobbyFragment_to_auctionFragment"
+            app:destination="@id/auctionFragment" />
+    </fragment>
 </navigation>

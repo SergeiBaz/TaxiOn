@@ -2,24 +2,24 @@ package presentation.fragments
 
 import adapter.AuctionItemAdapter
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.domain.entities.Auction
 import com.example.taxion.R
 import com.example.taxion.databinding.FragmentLobbyBinding
-import com.google.gson.Gson
 import dagger.hilt.android.AndroidEntryPoint
-import presentation.viewModels.AuctionViewModel
+import presentation.viewModels.LobbyViewModel
 
 @AndroidEntryPoint
-class LobbyFragment : Fragment() {
+class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
     private lateinit var binding: FragmentLobbyBinding
     private lateinit var adapter: AuctionItemAdapter
-    private val viewModel by viewModels<AuctionViewModel>()
+    private val viewModel by viewModels<LobbyViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -29,7 +29,7 @@ class LobbyFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         binding = FragmentLobbyBinding.bind(view)
-        adapter = AuctionItemAdapter()
+        adapter = AuctionItemAdapter(this)
         viewModel.getArrayAuctions()
         viewModel.idState.observe(this@LobbyFragment) {
             adapter.setAuctions(it)
@@ -38,5 +38,10 @@ class LobbyFragment : Fragment() {
         binding.rcViewAuctions.layoutManager = manager
         binding.rcViewAuctions.adapter = adapter
         super.onViewCreated(view, savedInstanceState)
+    }
+
+    override fun onClick(auction: Auction) {
+        val controller = findNavController()
+        controller.navigate(R.id.auctionFragment)
     }
 }

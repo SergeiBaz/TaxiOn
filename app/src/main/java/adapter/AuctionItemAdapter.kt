@@ -1,15 +1,17 @@
 package adapter
 
-import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.Navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.entities.Auction
+import com.example.taxion.R
 import com.example.taxion.databinding.FragmentAuctionItemBinding
-import com.google.gson.Gson
 
-
-class AuctionItemAdapter : RecyclerView.Adapter<AuctionItemAdapter.AuctionViewHolder>() {
+class AuctionItemAdapter(val listener: Listener) :
+    RecyclerView.Adapter<AuctionItemAdapter.AuctionViewHolder>() {
     private var auctionList: List<Auction> = ArrayList()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AuctionViewHolder {
@@ -29,13 +31,19 @@ class AuctionItemAdapter : RecyclerView.Adapter<AuctionItemAdapter.AuctionViewHo
             passengerId.text = auction.passengerId
             fromStreet.text = auction.from.street
             toStreet.text = auction.to.street
-            candidateIdCollection.text = auction.candidateIdCollection.joinToString()
         }
+        holder.itemView.setOnClickListener(View.OnClickListener() {
+            listener.onClick(auction)
+        })
     }
 
     fun setAuctions(auctionList: List<Auction>) {
         this.auctionList = auctionList
         notifyDataSetChanged()
+    }
+
+    interface Listener {
+        fun onClick(auction: Auction)
     }
 
     class AuctionViewHolder(val binding: FragmentAuctionItemBinding) :
