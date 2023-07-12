@@ -14,13 +14,11 @@ class AuctionsRepository @Inject constructor(
         return auctionsRemoteDataSource.getAuction(id)
     }
 
-    override suspend fun addCandidate(auctionId: Int, userId: Int): Auction? {
+    override suspend fun addCandidate(auctionId: Int, userId: String): Auction? {
         return auctionsRemoteDataSource.addCandidate(auctionId, userId)
     }
 
     override suspend fun getAuctionsArray(): List<Auction> {
         return auctionsRemoteDataSource.getAuctionsModelArray()
     }
-
-
 }

@@ -1,7 +1,8 @@
 package com.example.domain.entities
 
 class User(
-    val id: Int,
+    val id: String,
     val name: String
     ) {
+
 }

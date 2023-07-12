@@ -1,3 +1,3 @@
 package com.example.data.models
 
-data class AddCandidateRequestModel (val userId: Int)
+data class AddCandidateRequestModel (val userId: String)

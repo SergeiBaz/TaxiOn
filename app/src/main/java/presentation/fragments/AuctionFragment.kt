@@ -2,6 +2,7 @@ package presentation.fragments
 
 import adapter.DriverItemAdapter
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -29,15 +30,10 @@ class AuctionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         adapter = DriverItemAdapter()
-        viewModel.getAuction()
-        val candidates = listOf<Driver>(
-            Driver(User(1, "Sergo")),
-            Driver(User(2, "Nata")),
-            Driver(User(3, "Max"))
-        )
+        viewModel.getAuction(arguments!!)
+
         viewModel.idState.observe(this@AuctionFragment) {
-            /*adapter.setDrivers(it.candidates)*/
-            adapter.setDrivers(candidates)
+            adapter.setDrivers(it.candidateIdCollection)
         }
         val manager = LinearLayoutManager(activity)
         binding.driverRcView.layoutManager = manager

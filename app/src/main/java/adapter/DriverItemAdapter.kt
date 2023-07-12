@@ -3,12 +3,11 @@ package adapter
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.domain.entities.Driver
 
 import com.example.taxion.databinding.FragmentDriverItemBinding
 
 class DriverItemAdapter : RecyclerView.Adapter<DriverItemAdapter.DriverViewHolder>() {
-    private var drivers: List<Driver> = ArrayList()
+    private var drivers: List<String> = ArrayList()
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DriverViewHolder {
@@ -24,12 +23,11 @@ class DriverItemAdapter : RecyclerView.Adapter<DriverItemAdapter.DriverViewHolde
     override fun onBindViewHolder(holder: DriverViewHolder, position: Int) {
         val driver = drivers[position]
         with(holder.binding) {
-            textViewDriverName.text = driver.user.name
-            textViewDriverAvto.text = driver.user.id.toString()
+            textViewDriverName.text = driver
         }
     }
 
-    fun setDrivers(driverList: List<Driver>) {
+    fun setDrivers(driverList: List<String>) {
         this.drivers = driverList
         notifyDataSetChanged()
     }

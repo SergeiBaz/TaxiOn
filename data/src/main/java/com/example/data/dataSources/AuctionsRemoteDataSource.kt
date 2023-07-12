@@ -33,7 +33,7 @@ class AuctionsRemoteDataSource @Inject constructor(
         return auction
     }
 
-    suspend fun addCandidate(auctionId: Int, userId: Int): Auction? {
+    suspend fun addCandidate(auctionId: Int, userId: String): Auction? {
         val model = AddCandidateRequestModel(userId)
         return auctionApi.addCandidate(auctionId, createRequestBody(model)).body()
     }

@@ -1,5 +1,6 @@
 package presentation.viewModels
 
+import android.os.Bundle
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -19,9 +20,9 @@ class AuctionViewModel @Inject constructor(
     private val _idState = MutableLiveData<Auction>()
     val idState: LiveData<Auction> = _idState
 
-    fun getAuction() {
+    fun getAuction(bundle: Bundle) {
         viewModelScope.launch {
-            val auction = getAuctionUseCase(2)
+            val auction = getAuctionUseCase(bundle.getInt("id"))
             withContext(Dispatchers.Main) {
                 _idState.value = auction!!
             }

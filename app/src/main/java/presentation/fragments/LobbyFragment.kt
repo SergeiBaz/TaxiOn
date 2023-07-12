@@ -42,6 +42,8 @@ class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
 
     override fun onClick(auction: Auction) {
         val controller = findNavController()
-        controller.navigate(R.id.auctionFragment)
+        val bundle = Bundle()
+        bundle.putInt("id", auction.id)
+        controller.navigate(R.id.auctionFragment, bundle)
     }
 }
