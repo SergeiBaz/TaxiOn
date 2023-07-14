@@ -29,7 +29,7 @@ class UserChoiceFragment : Fragment() {
                 controller.navigate(R.id.splashScreenFragment)
             }
             ButtonDriver.setOnClickListener {
-                controller.navigate(R.id.loginFragment)
+                controller.navigate(R.id.lobbyFragment)
             }
         }
     }

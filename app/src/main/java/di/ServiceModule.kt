@@ -5,10 +5,6 @@ import com.example.domain.useCases.CreateAuctionUseCase
 import dagger.Module
 import dagger.Provides
 import com.example.data.repositories.AuctionsRepository
-import com.example.data.repositories.UserRepository
-import com.example.data.storage.firebase.FirebaseUserAuthStorage
-import com.example.data.storage.interfaces.UserAuthStorage
-import com.example.domain.useCases.RegisterUserUseCase
 import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ViewModelComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -37,6 +33,16 @@ class ServiceModule {
     @Provides
     fun provideCreateAuctionUseCase(repository: AuctionsRepository): CreateAuctionUseCase {
         return CreateAuctionUseCase(repository)
+    }
+
+    @Provides
+    fun provideGetAuctionUseCase(repository: AuctionsRepository): GetAuctionUseCase {
+        return GetAuctionUseCase(repository)
+    }
+
+    @Provides
+    fun provideGetArrayAuctionUseCase(repository: AuctionsRepository): GetArrayAuctionsUseCase {
+        return GetArrayAuctionsUseCase(repository)
     }
 
     @Provides
