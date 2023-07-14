@@ -20,7 +20,7 @@ class FirebaseUserAuthStorage : UserAuthStorage {
     override suspend fun register(userAuth: UserAuth): Flow<Response<Boolean>> = callbackFlow {
         trySend(Response.Loading())
 
-        fAuth.createUserWithEmailAndPassword(userAuth.email.toString(), userAuth.password.toString())
+        fAuth.createUserWithEmailAndPassword(userAuth.email, userAuth.password)
             .addOnSuccessListener {
                 trySend(Response.Success(data = true))
             }.addOnFailureListener { e ->

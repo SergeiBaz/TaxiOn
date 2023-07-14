@@ -8,6 +8,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import com.example.domain.entities.Email
+import com.example.domain.entities.Password
 import com.example.domain.entities.UserAuth
 import com.example.taxion.databinding.FragmentRegisterBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,13 +33,15 @@ class RegisterFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.apply {
-            registerBtn.setOnClickListener{
-                val userAuth = UserAuth(
-
-                )
+            registerBtn.setOnClickListener {
                 viewModel.registerUser(
-
+                    UserAuth(
+                        emailEt.text.toString(),
+                        passEt.text.toString()
+                    )
                 )
+                Log.d("MyLog", emailEt.text.toString())
+                Log.d("MyLog", passEt.text.toString())
             }
         }
     }
