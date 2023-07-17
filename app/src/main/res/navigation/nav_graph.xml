@@ -38,17 +38,21 @@
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="presentation.fragments.CreateAuctionFragment"
+        android:name="presentation.fragments.create_auction_fragment.CreateAuctionFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_create_auction" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="presentation.fragments.LoginFragment"
+        android:name="presentation.fragments.login_fragment.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/auctionFragment"
-        android:name="presentation.fragments.AuctionFragment"
+        android:name="presentation.fragments.auction_fragment.AuctionFragment"
         android:label="fragment_auction"
         tools:layout="@layout/fragment_auction">
     <action
@@ -69,11 +73,15 @@
     </fragment>
     <fragment
         android:id="@+id/lobbyFragment"
-        android:name="presentation.fragments.LobbyFragment"
+        android:name="presentation.fragments.lobby_fragment.LobbyFragment"
         android:label="fragment_lobby"
         tools:layout="@layout/fragment_lobby">
         <action
             android:id="@+id/action_lobbyFragment_to_auctionFragment"
             app:destination="@id/auctionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="presentation.fragments.register_fragment.RegisterFragment"
+        android:label="RegisterFragment" />
 </navigation>

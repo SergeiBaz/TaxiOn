@@ -1,4 +1,4 @@
-package presentation.fragments
+package presentation.fragments.register_fragment
 
 import android.os.Bundle
 import android.util.Log
@@ -8,13 +8,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
-import com.example.domain.entities.Email
-import com.example.domain.entities.Password
 import com.example.domain.entities.UserAuth
 import com.example.taxion.databinding.FragmentRegisterBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import presentation.viewModels.RegistrationViewModel
 
 @AndroidEntryPoint
 @ExperimentalCoroutinesApi

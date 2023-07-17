@@ -24,4 +24,18 @@ class AuctionsRemoteDataSource @Inject constructor(
         val model = CreateAuctionRequestModel(auction.from.street, auction.to.street)
         return auctionApi.createAuction(createRequestBody(model)).body()
     }
+
+    suspend fun getAuction(id: Int): Auction? {
+        return auctionApi.getAuction(id).body()
+    }
+
+    suspend fun addCandidate(auctionId: Int, userId: String): Auction? {
+        return auctionApi.addCandidate(auctionId, userId.toRequestBody()).body()
+    }
+
+    suspend fun getAuctionsModelArray(): List<Auction>? {
+        return auctionApi.getAuctionsModelArray().body()
+    }
+
+
 }

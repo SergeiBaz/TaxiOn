@@ -1,4 +1,4 @@
-package presentation.viewModels
+package presentation.fragments.lobby_fragment
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -14,8 +14,8 @@ import javax.inject.Inject
 class LobbyViewModel @Inject constructor(
     private val getArrayAuctionsUseCase: GetArrayAuctionsUseCase
 ) : ViewModel() {
-    private val _idState = MutableLiveData<List<Auction>>()
-    val idState: LiveData<List<Auction>> = _idState
+    private val _idState = MutableLiveData<List<Auction>?>()
+    val idState: LiveData<List<Auction>?> = _idState
 
     fun getArrayAuctions() {
         viewModelScope.launch {

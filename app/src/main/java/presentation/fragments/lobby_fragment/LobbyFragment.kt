@@ -1,6 +1,5 @@
-package presentation.fragments
+package presentation.fragments.lobby_fragment
 
-import adapter.AuctionItemAdapter
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -13,7 +12,6 @@ import com.example.domain.entities.Auction
 import com.example.taxion.R
 import com.example.taxion.databinding.FragmentLobbyBinding
 import dagger.hilt.android.AndroidEntryPoint
-import presentation.viewModels.LobbyViewModel
 
 @AndroidEntryPoint
 class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
@@ -32,7 +30,7 @@ class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
         adapter = AuctionItemAdapter(this)
         viewModel.getArrayAuctions()
         viewModel.idState.observe(this@LobbyFragment) {
-            adapter.setAuctions(it)
+            adapter.setAuctions(it!!)
         }
         val manager = LinearLayoutManager(activity)
         binding.rcViewAuctions.layoutManager = manager

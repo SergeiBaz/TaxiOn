@@ -1,4 +1,4 @@
-package presentation.viewModels
+package presentation.fragments.register_fragment
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -10,7 +10,6 @@ import com.example.domain.entities.UserAuth
 import com.example.domain.useCases.RegisterUserUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.*
-import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
 @HiltViewModel

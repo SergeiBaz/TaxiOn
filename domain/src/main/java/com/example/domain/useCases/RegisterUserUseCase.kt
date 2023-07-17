@@ -1,7 +1,5 @@
 package com.example.domain.useCases
 
-import com.example.domain.entities.Email
-import com.example.domain.entities.Password
 import com.example.domain.entities.Response
 import com.example.domain.entities.UserAuth
 import com.example.domain.repositories.UserRepository

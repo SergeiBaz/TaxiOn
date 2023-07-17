@@ -1,13 +1,10 @@
-package adapter
+package presentation.fragments.lobby_fragment
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.entities.Auction
-import com.example.taxion.R
 import com.example.taxion.databinding.FragmentAuctionItemBinding
 
 class AuctionItemAdapter(val listener: Listener) :

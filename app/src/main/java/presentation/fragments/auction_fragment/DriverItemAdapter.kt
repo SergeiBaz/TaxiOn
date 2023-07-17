@@ -1,4 +1,4 @@
-package adapter
+package presentation.fragments.auction_fragment
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

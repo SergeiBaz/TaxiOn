@@ -1,4 +1,4 @@
-package presentation.viewModels
+package presentation.fragments.auction_fragment
 
 import android.os.Bundle
 import androidx.lifecycle.LiveData
