@@ -1,4 +1,4 @@
-package presentation.viewModels
+package presentation.fragments.create_auction_fragment
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -12,8 +12,8 @@ import javax.inject.Inject
 @HiltViewModel
 class CreateAuctionViewModel @Inject constructor
     (
-    private val createAuctionUseCase: CreateAuctionUseCase)
-    : ViewModel() {
+    private val createAuctionUseCase: CreateAuctionUseCase
+    ) : ViewModel() {
     private val _uiState = MutableLiveData<String>()
     val uiState: LiveData<String> = _uiState
 

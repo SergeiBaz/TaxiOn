@@ -1,4 +1,4 @@
-package presentation.fragments
+package presentation.fragments.create_auction_fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.taxion.databinding.FragmentCreateAuctionBinding
 import dagger.hilt.android.AndroidEntryPoint
-import presentation.viewModels.CreateAuctionViewModel
 
 @AndroidEntryPoint
 class CreateAuctionFragment : Fragment() {
@@ -25,7 +24,7 @@ class CreateAuctionFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.uiState.observe(this) {
+        viewModel.uiState.observe(viewLifecycleOwner) {
             binding.textViewRendering.text = it
         }
         binding.apply {
