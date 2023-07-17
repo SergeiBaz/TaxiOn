@@ -29,7 +29,7 @@ class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
         binding = FragmentLobbyBinding.bind(view)
         adapter = AuctionItemAdapter(this)
         viewModel.getArrayAuctions()
-        viewModel.idState.observe(this@LobbyFragment) {
+        viewModel.idState.observe(viewLifecycleOwner) {
             adapter.setAuctions(it!!)
         }
         val manager = LinearLayoutManager(activity)

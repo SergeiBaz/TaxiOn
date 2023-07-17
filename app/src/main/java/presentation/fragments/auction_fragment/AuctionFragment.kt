@@ -25,9 +25,9 @@ class AuctionFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         adapter = DriverItemAdapter()
-        viewModel.getAuction(arguments!!)
+        viewModel.getAuction(requireArguments())
 
-        viewModel.idState.observe(this@AuctionFragment) {
+        viewModel.idState.observe(viewLifecycleOwner) {
             adapter.setDrivers(it.candidateIdCollection)
         }
         val manager = LinearLayoutManager(activity)

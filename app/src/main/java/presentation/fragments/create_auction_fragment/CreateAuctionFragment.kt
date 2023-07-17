@@ -24,7 +24,7 @@ class CreateAuctionFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.uiState.observe(this) {
+        viewModel.uiState.observe(viewLifecycleOwner) {
             binding.textViewRendering.text = it
         }
         binding.apply {
