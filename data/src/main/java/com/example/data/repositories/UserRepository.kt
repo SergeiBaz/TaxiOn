@@ -1,6 +1,6 @@
 package com.example.data.repositories
 
-import com.example.data.storage.interfaces.UserAuthStorage
+import com.example.data.storage.firebase.UserAuthStorage
 import com.example.domain.entities.Response
 import com.example.domain.entities.UserAuth
 import com.example.domain.repositories.UserRepository

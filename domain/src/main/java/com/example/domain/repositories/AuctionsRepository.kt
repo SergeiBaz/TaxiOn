@@ -7,6 +7,4 @@ interface AuctionsRepository {
     suspend fun getAuction(id: Int): Auction?
     suspend fun addCandidate(auctionId: Int, userId: String): Auction?
     suspend fun getAuctionsArray(): List<Auction>?
-
-
 }

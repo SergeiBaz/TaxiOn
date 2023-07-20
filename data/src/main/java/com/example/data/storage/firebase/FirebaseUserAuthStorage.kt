@@ -1,6 +1,5 @@
 package com.example.data.storage.firebase
 
-import com.example.data.storage.interfaces.UserAuthStorage
 import com.example.domain.entities.Response
 import com.example.domain.entities.UserAuth
 import com.google.firebase.auth.FirebaseAuth

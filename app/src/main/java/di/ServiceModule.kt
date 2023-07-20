@@ -1,13 +1,16 @@
 package di
 
 import android.content.Context
+import androidx.room.Room
 import com.example.domain.useCases.CreateAuctionUseCase
 import dagger.Module
 import dagger.Provides
 import com.example.data.repositories.AuctionsRepository
 import com.example.data.repositories.UserRepository
 import com.example.data.storage.firebase.FirebaseUserAuthStorage
-import com.example.data.storage.interfaces.UserAuthStorage
+import com.example.data.storage.firebase.UserAuthStorage
+import com.example.data.storage.local_db.dao.Dao
+import com.example.data.storage.local_db.db.Database
 import com.example.domain.useCases.GetArrayAuctionsUseCase
 import com.example.domain.useCases.GetAuctionUseCase
 import com.example.domain.useCases.RegisterUserUseCase
@@ -53,5 +56,21 @@ class ServiceModule {
     @Provides
     fun provideContext(@ApplicationContext context: Context): Context {
         return context
+    }
+
+    @Provides
+    fun provideDatabase(context: Context): Database {
+        return Room.databaseBuilder(
+            context,
+            Database::class.java,
+            "Data_base",
+        )
+            .fallbackToDestructiveMigration()
+            .build()
+    }
+
+    @Provides
+    fun provideDao(database: Database) : Dao {
+        return database.getDao()
     }
 }

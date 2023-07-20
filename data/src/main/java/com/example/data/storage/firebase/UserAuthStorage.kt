@@ -1,4 +1,4 @@
-package com.example.data.storage.interfaces
+package com.example.data.storage.firebase
 
 import com.example.domain.entities.Response
 import com.example.domain.entities.UserAuth
