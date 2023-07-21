@@ -22,7 +22,7 @@
             android:theme="@style/Theme.TaxiOn.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
+                <data android:scheme="ru.taxion.oauth" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
