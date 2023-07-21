@@ -4,4 +4,4 @@
     android:id="@+id/rcViewAuctions"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="presentation.fragments.lobby_fragment.LobbyFragment" />
+    tools:context="ui.fragments.lobby_fragment.LobbyFragment" />

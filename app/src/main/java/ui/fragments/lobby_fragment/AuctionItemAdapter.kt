@@ -1,4 +1,4 @@
-package presentation.fragments.lobby_fragment
+package ui.fragments.lobby_fragment
 
 import android.view.LayoutInflater
 import android.view.View

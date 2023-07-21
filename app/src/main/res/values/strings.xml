@@ -16,4 +16,5 @@
     <string name="user_choice">Выбор пользователя</string>
     <string name="passenger">Пассажир</string>
     <string name="passenger_choice">passenger choice</string>
+    <integer name="com_vk_sdk_AppId">51709483</integer>
 </resources>

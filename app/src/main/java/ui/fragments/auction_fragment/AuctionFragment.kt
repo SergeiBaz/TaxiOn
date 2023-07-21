@@ -1,4 +1,4 @@
-package presentation.fragments.auction_fragment
+package ui.fragments.auction_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

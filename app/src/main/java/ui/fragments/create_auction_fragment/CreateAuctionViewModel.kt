@@ -1,4 +1,4 @@
-package presentation.fragments.create_auction_fragment
+package ui.fragments.create_auction_fragment
 
 import android.util.Log
 import androidx.lifecycle.LiveData

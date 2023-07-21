@@ -1,4 +1,4 @@
-package presentation.fragments.lobby_fragment
+package ui.fragments.lobby_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

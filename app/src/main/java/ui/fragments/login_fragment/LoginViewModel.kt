@@ -1,4 +1,4 @@
-package presentation.fragments.login_fragment
+package ui.fragments.login_fragment
 
 import android.app.Application
 import android.content.Intent
@@ -63,7 +63,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         Log.d("mylog", tokenRequest.authorizationCode.toString())
     }
 
-
     fun openLoginPage() {
         val customTabsIntent = CustomTabsIntent.Builder().build()
 
@@ -81,7 +80,6 @@ class LoginViewModel(application: Application) : AndroidViewModel(application) {
         openAuthPageEventChannel.trySendBlocking(openAuthPageIntent)
         /*     Timber.tag("Oauth").d("2. Open auth page: ${authRequest.toUri()}")*/
     }
-
 
     override fun onCleared() {
         super.onCleared()

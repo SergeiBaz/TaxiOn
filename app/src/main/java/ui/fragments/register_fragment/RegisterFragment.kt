@@ -1,4 +1,4 @@
-package presentation.fragments.register_fragment
+package ui.fragments.register_fragment
 
 import android.os.Bundle
 import android.util.Log

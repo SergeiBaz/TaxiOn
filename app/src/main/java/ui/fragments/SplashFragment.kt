@@ -1,4 +1,4 @@
-package presentation.fragments
+package ui.fragments
 
 import android.animation.ObjectAnimator
 import android.os.Bundle

@@ -1,18 +1,17 @@
-package presentation.fragments.lobby_fragment
+package ui.fragments.auction_fragment
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import com.example.taxion.R
 
-
-class AuctionItemFragment : Fragment() {
+class DriverItemFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.fragment_lobby, container, false)
+    ): View? {
+        return inflater.inflate(R.layout.fragment_driver_item, container, false)
     }
 }

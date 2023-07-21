@@ -1,4 +1,4 @@
-package presentation.fragments.login_fragment
+package ui.fragments.login_fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,14 +10,9 @@ import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.taxion.R
 import com.example.taxion.databinding.FragmentLoginBinding
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
-import kotlinx.coroutines.flow.launchIn
-import kotlinx.coroutines.launch
 import net.openid.appauth.AuthorizationException
 import net.openid.appauth.AuthorizationResponse
 
@@ -35,8 +30,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         getAuthResponse.launch(intent)
     }
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,9 +40,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val controller = findNavController()
-
-
         viewModel.openLoginPage()
         viewModel.loadingFlow.launchAndCollectIn(viewLifecycleOwner) {
             updateIsLoading(it)
@@ -63,7 +53,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         viewModel.toastFlow.launchAndCollectIn(viewLifecycleOwner) {
             Toast.makeText(requireContext(), it, Toast.LENGTH_SHORT).show()
         }
-
     }
 
     private fun updateIsLoading(isLoading: Boolean) = with(binding) {
