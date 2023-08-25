@@ -8,8 +8,6 @@ import com.example.taxion.databinding.FragmentDriverItemBinding
 
 class DriverItemAdapter : RecyclerView.Adapter<DriverItemAdapter.DriverViewHolder>() {
     private var drivers: List<String> = ArrayList()
-
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DriverViewHolder {
         val binding = FragmentDriverItemBinding.inflate(
             LayoutInflater.from(parent.context),

@@ -12,7 +12,7 @@ import javax.inject.Inject
 
 class AuctionsRemoteDataSource @Inject constructor(
     private val retrofit: Retrofit,
-    ) {
+) {
     private val auctionApi: AuctionApi = retrofit.create(AuctionApi::class.java)
     private val gson = Gson()
 
@@ -36,6 +36,4 @@ class AuctionsRemoteDataSource @Inject constructor(
     suspend fun getAuctionsModelArray(): List<Auction>? {
         return auctionApi.getAuctionsModelArray().body()
     }
-
-
 }

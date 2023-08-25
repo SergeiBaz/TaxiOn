@@ -1,5 +1,7 @@
 package com.example.domain.entities
 
+import com.example.domain.model.Address
+
 class Auction(
     var from: Address,
     var to: Address,

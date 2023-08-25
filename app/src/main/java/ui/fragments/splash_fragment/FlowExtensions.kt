@@ -1,4 +1,4 @@
-package ui.fragments.login_fragment
+package ui.fragments.splash_fragment
 
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleOwner

@@ -9,7 +9,7 @@
         app:argType="integer" />
     <fragment
         android:id="@+id/splashFragment"
-        android:name="ui.fragments.SplashFragment"
+        android:name="ui.fragments.splash_fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -43,7 +43,7 @@
         tools:layout="@layout/fragment_create_auction" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="ui.fragments.login_fragment.LoginFragment"
+        android:name="ui.fragments.splash_fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action

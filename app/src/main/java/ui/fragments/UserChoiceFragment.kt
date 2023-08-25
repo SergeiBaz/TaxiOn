@@ -10,7 +10,6 @@ import com.example.taxion.R
 import com.example.taxion.databinding.FragmentUserChoiceBinding
 
 class UserChoiceFragment : Fragment() {
-
     lateinit var binding: FragmentUserChoiceBinding
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,7 +28,7 @@ class UserChoiceFragment : Fragment() {
                 controller.navigate(R.id.splashScreenFragment)
             }
             ButtonDriver.setOnClickListener {
-                controller.navigate(R.id.loginFragment)
+                controller.navigate(R.id.lobbyFragment)
             }
         }
     }

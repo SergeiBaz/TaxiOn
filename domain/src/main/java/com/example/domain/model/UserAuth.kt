@@ -1,4 +1,4 @@
-package com.example.domain.entities
+package com.example.domain.model
 
 class UserAuth(
     val email: String,

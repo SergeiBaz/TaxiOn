@@ -1,4 +1,4 @@
-package com.example.domain.entities
+package com.example.domain.model
 
 sealed class Response<out T> {
     class Loading<out T> : Response<T>()

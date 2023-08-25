@@ -24,7 +24,7 @@ android {
             arguments {arg("room.schemaLocation", "$projectDir/schemas")}
         }
         manifestPlaceholders = [
-                appAuthRedirectScheme: "ru.taxion.oauth"
+                appAuthRedirectScheme: "ru.kts.oauth"
         ]
     }
 
@@ -47,8 +47,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.vk:android-sdk-core:3.x.x'
-    implementation 'com.vk:android-sdk-api:3.x.x'
+    implementation 'com.vk:android-sdk-core:4.0.1'
+    implementation 'com.vk:android-sdk-api:4.0.1'
 
     implementation 'net.openid:appauth:0.11.1'
 
