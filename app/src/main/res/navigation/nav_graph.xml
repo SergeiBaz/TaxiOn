@@ -27,7 +27,7 @@
         tools:layout="@layout/fragment_user_choice">
         <action
             android:id="@+id/action_userChoiceFragment_to_splashScreenFragment"
-            app:destination="@id/splashScreenFragment"
+            app:destination="@id/fragment_create_auction"
             app:popUpTo="@+id/userChoiceFragment" />
         <action
             android:id="@+id/action_userChoiceFragment_to_loginFragment"
@@ -37,7 +37,7 @@
             app:destination="@id/lobbyFragment" />
     </fragment>
     <fragment
-        android:id="@+id/splashScreenFragment"
+        android:id="@+id/fragment_create_auction"
         android:name="presentation.fragments.create_auction_fragment.CreateAuctionFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_create_auction" />

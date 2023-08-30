@@ -12,6 +12,9 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url "https://yandex.ru/"
+        }
     }
 }
 plugins {
