@@ -26,21 +26,24 @@
         android:label="fragment_user_choice"
         tools:layout="@layout/fragment_user_choice">
         <action
-            android:id="@+id/action_userChoiceFragment_to_splashScreenFragment"
-            app:destination="@id/fragment_create_auction"
-            app:popUpTo="@+id/userChoiceFragment" />
-        <action
             android:id="@+id/action_userChoiceFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_userChoiceFragment_to_lobbyFragment"
             app:destination="@id/lobbyFragment" />
+        <action
+            android:id="@+id/action_userChoiceFragment_to_yandexMapFragment"
+            app:destination="@id/yandexMapFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragment_create_auction"
         android:name="presentation.fragments.create_auction_fragment.CreateAuctionFragment"
         android:label="fragment_splash_screen"
-        tools:layout="@layout/fragment_create_auction" />
+        tools:layout="@layout/fragment_create_auction" >
+        <action
+            android:id="@+id/action_fragment_create_auction_to_yandexMapFragment"
+            app:destination="@id/yandexMapFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="presentation.fragments.login_fragment.LoginFragment"
@@ -84,4 +87,12 @@
         android:id="@+id/registerFragment"
         android:name="presentation.fragments.register_fragment.RegisterFragment"
         android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/yandexMapFragment"
+        android:name="presentation.fragments.yandexMap_fragment.YandexMapFragment"
+        android:label="YandexMapFragment" >
+        <action
+            android:id="@+id/action_yandexMapFragment_to_userChoiceFragment"
+            app:destination="@id/userChoiceFragment" />
+    </fragment>
 </navigation>

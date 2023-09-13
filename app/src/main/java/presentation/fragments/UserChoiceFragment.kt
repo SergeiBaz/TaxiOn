@@ -26,7 +26,7 @@ class UserChoiceFragment : Fragment() {
         val controller = findNavController()
         binding.apply {
             ButtonPassenger.setOnClickListener {
-                controller.navigate(R.id.fragment_create_auction)
+                controller.navigate(R.id.yandexMapFragment)
             }
             ButtonDriver.setOnClickListener {
                 controller.navigate(R.id.loginFragment)

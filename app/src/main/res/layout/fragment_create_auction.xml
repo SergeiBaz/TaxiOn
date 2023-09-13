@@ -3,57 +3,57 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context="presentation.fragments.create_auction_fragment.CreateAuctionFragment">
-    <com.yandex.mapkit.mapview.MapView
-        android:id="@+id/mapview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
 
-    <Button
-        android:id="@+id/createAuctionButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Create Auction"
-        app:layout_constraintEnd_toEndOf="@+id/editTextStreetTo"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/editTextStreetTo"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStreetTo" />
-
-    <EditText
-        android:id="@+id/editTextStreetFrom"
+    <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:ems="11"
-        android:hint="Введите точку подачу"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:alpha="1"
+        android:foregroundGravity="center"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextStreetTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="11"
-        android:hint="Введите конечную точку"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextStreetFrom"
-        app:layout_constraintStart_toStartOf="@+id/editTextStreetFrom"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStreetFrom" />
+        <EditText
+            android:id="@+id/editTextStreetTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="64dp"
+            android:ems="11"
+            android:hint="Введите конечную точку"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
 
-    <TextView
-        android:id="@+id/textViewRendering"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/createAuctionButton"
-        app:layout_constraintStart_toStartOf="@+id/createAuctionButton"
-        app:layout_constraintTop_toBottomOf="@+id/createAuctionButton" />
+        <Button
+            android:id="@+id/createAuctionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="104dp"
+            android:backgroundTint="#FCC88A"
+            android:text="Создать аукцион" />
+
+        <EditText
+            android:id="@+id/editTextStreetFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="24dp"
+            android:ems="11"
+            android:hint="Введите точку подачи"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <TextView
+            android:id="@+id/textViewRendering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="148dp" />
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
