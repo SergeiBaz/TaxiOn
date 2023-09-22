@@ -6,15 +6,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.findViewTreeViewModelStoreOwner
 import androidx.navigation.fragment.findNavController
 import com.example.taxion.R
 import com.example.taxion.databinding.FragmentSplashBinding
-import com.yandex.mapkit.Animation
-import com.yandex.mapkit.MapKitFactory
-import com.yandex.mapkit.geometry.Point
-import com.yandex.mapkit.map.CameraPosition
-import com.yandex.mapkit.mapview.MapView
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -41,8 +35,9 @@ class SplashFragment : Fragment() {
             )
                 .setDuration(3000).start()
             delay(3000)
-            val controller = findNavController()
-            controller.navigate(R.id.userChoiceFragment)
+            findNavController().navigate(
+                R.id.action_splashFragment_to_userChoiceFragment,
+            )
         }
     }
 }
