@@ -35,8 +35,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
         getAuthResponse.launch(intent)
     }
 
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -47,9 +45,6 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val controller = findNavController()
-
-
         viewModel.openLoginPage()
         viewModel.loadingFlow.launchAndCollectIn(viewLifecycleOwner) {
             updateIsLoading(it)

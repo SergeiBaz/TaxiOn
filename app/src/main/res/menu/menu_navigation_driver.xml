@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/loginFragment2"
+        android:title="@string/list_auctions" />
+  <!--  <item
+        android:id="@+id/auctionFragment2"
+        android:title="@string/drive" />-->
+    <item
+        android:id="@+id/yandexMapFragment"
+        android:title="@string/map" />
+</menu>

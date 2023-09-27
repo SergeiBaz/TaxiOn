@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_screen_driver"
+    app:startDestination="@id/lobbyFragment2">
+    <fragment
+        android:id="@+id/yandexMapFragment"
+        android:name="presentation.fragments.yandexMap_fragment.YandexMapFragment"
+        android:label="fragment_yandex_map"
+        tools:layout="@layout/fragment_yandex_map" />
+    <fragment
+        android:id="@+id/auctionFragment2"
+        android:name="presentation.fragments.auction_fragment.AuctionFragment"
+        android:label="fragment_auction"
+        tools:layout="@layout/fragment_auction" />
+    <fragment
+        android:id="@+id/lobbyFragment2"
+        android:name="presentation.fragments.lobby_fragment.LobbyFragment"
+        android:label="fragment_lobby"
+        tools:layout="@layout/fragment_lobby" >
+        <action
+            android:id="@+id/action_lobbyFragment2_to_auctionFragment2"
+            app:destination="@id/auctionFragment2" />
+    </fragment>
+</navigation>

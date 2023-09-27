@@ -29,7 +29,7 @@ class UserChoiceFragment : Fragment() {
                 controller.navigate(R.id.yandexMapFragment)
             }
             ButtonDriver.setOnClickListener {
-                controller.navigate(R.id.loginFragment)
+                controller.navigate(R.id.action_userChoiceFragment_to_driverMainScreenFragment2)
             }
         }
     }

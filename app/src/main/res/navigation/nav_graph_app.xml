@@ -48,6 +48,9 @@
             app:exitAnim="@anim/nav_default_pop_exit_anim"
             app:popEnterAnim="@animator/nav_default_pop_enter_anim"
             app:popExitAnim="@anim/nav_default_pop_exit_anim"/>
+        <action
+            android:id="@+id/action_userChoiceFragment_to_driverMainScreenFragment2"
+            app:destination="@id/driverMainScreenFragment2" />
     </fragment>
     <fragment
         android:id="@+id/fragment_create_auction"
@@ -113,4 +116,8 @@
             android:id="@+id/action_yandexMapFragment_to_userChoiceFragment"
             app:destination="@id/userChoiceFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/driverMainScreenFragment2"
+        android:name="presentation.fragments.mainScreen.DriverMainScreenFragment"
+        android:label="DriverMainScreenFragment" />
 </navigation>
