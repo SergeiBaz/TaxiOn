@@ -26,20 +26,22 @@
         android:label="fragment_user_choice"
         tools:layout="@layout/fragment_user_choice">
         <action
-            android:id="@+id/action_userChoiceFragment_to_splashScreenFragment"
-            app:destination="@id/splashScreenFragment"
-            app:popUpTo="@+id/userChoiceFragment" />
-        <action
             android:id="@+id/action_userChoiceFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
             android:id="@+id/action_userChoiceFragment_to_lobbyFragment"
             app:destination="@id/lobbyFragment" />
+        <action
+            android:id="@+id/action_userChoiceFragment_to_fragmentCreateAuction"
+            app:destination="@id/fragmentCreateAuction" />
+        <action
+            android:id="@+id/action_userChoiceFragment_to_tripFragment"
+            app:destination="@id/tripFragment" />
     </fragment>
     <fragment
-        android:id="@+id/splashScreenFragment"
+        android:id="@+id/fragmentCreateAuction"
         android:name="presentation.fragments.create_auction_fragment.CreateAuctionFragment"
-        android:label="fragment_splash_screen"
+        android:label="fragment_create_auction"
         tools:layout="@layout/fragment_create_auction" />
     <fragment
         android:id="@+id/loginFragment"
@@ -54,23 +56,7 @@
         android:id="@+id/auctionFragment"
         android:name="presentation.fragments.auction_fragment.AuctionFragment"
         android:label="fragment_auction"
-        tools:layout="@layout/fragment_auction">
-    <action
-        android:id="@+id/add"
-        app:destination="@id/auctionFragment">
-        <argument
-            android:name="id"
-            android:defaultValue="0"
-            app:argType="integer" />
-    </action>
-    <action
-        android:id="@+id/edit"
-        app:destination="@id/auctionFragment">
-        <argument
-            android:name="id"
-            app:argType="integer" />
-    </action>
-    </fragment>
+        tools:layout="@layout/fragment_auction"/>
     <fragment
         android:id="@+id/lobbyFragment"
         android:name="presentation.fragments.lobby_fragment.LobbyFragment"
@@ -84,4 +70,9 @@
         android:id="@+id/registerFragment"
         android:name="presentation.fragments.register_fragment.RegisterFragment"
         android:label="RegisterFragment" />
+    <fragment
+        android:id="@+id/tripFragment"
+        android:name="presentation.fragments.trip_fragment.TripFragment"
+        android:label="fragment_trip"
+        tools:layout="@layout/fragment_trip" />
 </navigation>

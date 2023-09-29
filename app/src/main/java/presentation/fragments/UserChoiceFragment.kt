@@ -26,7 +26,7 @@ class UserChoiceFragment : Fragment() {
         val controller = findNavController()
         binding.apply {
             ButtonPassenger.setOnClickListener {
-                controller.navigate(R.id.splashScreenFragment)
+                controller.navigate(R.id.tripFragment)
             }
             ButtonDriver.setOnClickListener {
                 controller.navigate(R.id.lobbyFragment)
