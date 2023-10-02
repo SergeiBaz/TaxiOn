@@ -3,25 +3,142 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cardViewItemOfferDriver"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    app:cardBackgroundColor="#FFFFFF"
     app:cardCornerRadius="10dp"
+    app:cardElevation="4dp"
     tools:context="presentation.fragments.trip_fragment.ItemOfferDriverFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ImageView
-            android:id="@+id/imageView3"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/photoDriver"
             android:layout_width="48dp"
-            android:layout_height="48dp"
-            android:layout_margin="5dp"
-            android:layout_marginStart="13dp"
-            android:layout_marginTop="13dp"
-            android:padding="5dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:padding="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingNumberTextView"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/brandCarTextView"
+            app:shapeAppearanceOverlay="@style/circle"
+            app:strokeColor="@color/black10"
+            app:strokeWidth="1dp"
+            tools:ignore="ImageContrastCheck"
             tools:src="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/brandCarTextView"
+            style="@style/textBoldForCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@+id/photoDriver"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Марка Авто" />
+
+        <TextView
+            android:id="@+id/nameDrivertextView"
+            style="@style/textBoldForCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/brandCarTextView"
+            app:layout_constraintTop_toBottomOf="@+id/brandCarTextView"
+            tools:text="Имя Водителя" />
+
+        <ImageView
+            android:id="@+id/raiting"
+            android:layout_width="15dp"
+            android:layout_height="0dp"
+            android:importantForAccessibility="no"
+            android:src="@android:drawable/btn_star_big_on"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingNumberTextView"
+            app:layout_constraintStart_toStartOf="@+id/nameDrivertextView"
+            app:layout_constraintTop_toTopOf="@+id/ratingNumberTextView"
+            tools:ignore="ImageContrastCheck" />
+
+        <TextView
+            android:id="@+id/ratingNumberTextView"
+            style="@style/textBoldForCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            app:layout_constraintStart_toEndOf="@+id/raiting"
+            app:layout_constraintTop_toBottomOf="@+id/nameDrivertextView"
+            tools:text="5.0" />
+
+        <TextView
+            android:id="@+id/NumberVotesTextView"
+            style="@style/textTranslucent"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginStart="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ratingNumberTextView"
+            app:layout_constraintStart_toEndOf="@+id/ratingNumberTextView"
+            app:layout_constraintTop_toTopOf="@+id/ratingNumberTextView"
+            tools:text="(100)" />
+
+        <TextView
+            android:id="@+id/priceTripTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="8dp"
+            android:textColor="#149263"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Цена поездки" />
+
+        <Button
+            android:id="@+id/acceptButton"
+            style="@style/textBoldForCardView"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="10dp"
+            android:backgroundTint="@color/color_accept_buttom"
+            android:text="@string/accept"
+            android:textSize="12sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/raiting" />
+
+        <Button
+            android:id="@+id/canselButton"
+            style="@style/textBoldForCardView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:backgroundTint="@color/color_refuse_buttom"
+            android:text="@string/refuse"
+            android:textSize="12sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="@+id/acceptButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/divider"
+            app:layout_constraintTop_toBottomOf="@+id/raiting"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:alpha="0"
+            android:background="?android:attr/listDivider"
+            app:layout_constraintBottom_toBottomOf="@+id/canselButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

@@ -16,4 +16,6 @@
     <string name="user_choice">Выбор пользователя</string>
     <string name="passenger">Пассажир</string>
     <string name="passenger_choice">passenger choice</string>
+    <string name="accept">Принять</string>
+    <string name="refuse">Отказать</string>
 </resources>

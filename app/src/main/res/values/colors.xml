@@ -20,4 +20,6 @@
 
     <color name="tab_selected">#FF000000</color>
     <color name="tab_unselected">#4D000000</color>
+    <color name="color_accept_buttom">#95FF10</color>
+    <color name="color_refuse_buttom">#d24f5d</color>
 </resources>
