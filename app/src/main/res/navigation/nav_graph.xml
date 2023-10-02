@@ -72,7 +72,7 @@
         android:label="RegisterFragment" />
     <fragment
         android:id="@+id/tripFragment"
-        android:name="presentation.fragments.trip_fragment.TripFragment"
+        android:name="presentation.fragments.trip_fragment.PassengerTripFragment"
         android:label="fragment_trip"
-        tools:layout="@layout/fragment_trip" />
+        tools:layout="@layout/fragment_passenger_trip" />
 </navigation>

@@ -1,3 +1,5 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="CornerRadius10dp">10dp</dimen>
+    <dimen name="CornerRadius20dp">20dp</dimen>
 </resources>
