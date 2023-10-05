@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="button_rounded">
+    <item name="backgroundTint">@color/color_button_user_choice</item>
+    <item name="cornerRadius">@dimen/CornerRadius20dp</item>
+    <item name="android:textSize">20sp</item>
+    <item name="textAllCaps">false</item>
+        <item name="android:textColor">@color/black70</item>
+</style>
+</resources>
