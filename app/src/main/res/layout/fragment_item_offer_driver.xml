@@ -16,10 +16,10 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/photoDriver"
             android:layout_width="48dp"
-            android:layout_height="0dp"
+            android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:padding="1dp"
-            app:layout_constraintBottom_toBottomOf="@+id/ratingNumberTextView"
+            app:layout_constraintBottom_toTopOf="@+id/NumberVotesTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/brandCarTextView"
             app:shapeAppearanceOverlay="@style/circle"

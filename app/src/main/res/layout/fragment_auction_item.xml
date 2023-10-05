@@ -1,49 +1,174 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    app:cardUseCompatPadding="true"
+    android:elevation="2dp"
+    android:orientation="vertical"
     app:cardCornerRadius="8dp"
-    android:elevation="8dp"
-    android:orientation="vertical">
+    app:cardUseCompatPadding="true">
 
-    <LinearLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/idAuction"
-            android:layout_width="match_parent"
+            style="@style/textBoldForCardView"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="ID"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:padding="2dp"
+            android:text="@string/auction_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewToStreet"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/cardViewFromStreet"
+            app:layout_constraintStart_toStartOf="@+id/cardViewFromStreet"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewFromStreet">
+
+            <TextView
+                android:id="@+id/toStreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                tools:text="Куда" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewFromStreet"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/idAuction">
+
+            <TextView
+                android:id="@+id/fromStreet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                tools:text="Откуда" />
+        </androidx.cardview.widget.CardView>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/photoPassengerImageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/passNametextView2"
+            app:layout_constraintEnd_toStartOf="@+id/passNametextView2"
+            app:layout_constraintTop_toTopOf="@+id/textPass2"
+            app:shapeAppearanceOverlay="@style/circle"
+            app:strokeColor="@color/black10"
+            app:strokeWidth="1dp"
+            tools:src="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:src="@android:drawable/ic_menu_recent_history"
+            app:layout_constraintBottom_toBottomOf="@+id/timerTextView2"
+            app:layout_constraintEnd_toStartOf="@+id/timerTextView2"
+            app:layout_constraintTop_toTopOf="@+id/timerTextView2" />
+
+        <TextView
+            android:id="@+id/quantityCandidatesTextView"
+            style="@style/textBoldForCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView4"
+            app:layout_constraintStart_toEndOf="@+id/cardViewToStreet"
+            app:layout_constraintTop_toBottomOf="@+id/cardViewToStreet"
+            tools:text="3 Кандидата" />
+
+        <TextView
+            android:id="@+id/timerTextView2"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="time"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/rateTextView2"
+            app:layout_constraintEnd_toStartOf="@+id/rateTextView2"
+            app:layout_constraintTop_toTopOf="@+id/rateTextView2"
+            tools:ignore="TouchTargetSizeCheck"
+            tools:text="4:31" />
+
+        <TextView
+            android:id="@+id/rateTextView2"
+            style="@style/textBoldForCardView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/current_rate"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passNametextView2" />
+
+        <TextView
+            android:id="@+id/priceTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/rateTextView2"
+            app:layout_constraintStart_toStartOf="@+id/rateTextView2"
+            app:layout_constraintTop_toBottomOf="@+id/rateTextView2"
+            tools:text="200p" />
+
+        <TextView
+            android:id="@+id/textPass2"
+            style="@style/textBoldForCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="@string/passenger"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/passengerId"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="TextSizeCheck" />
+
+        <TextView
+            android:id="@+id/passNametextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@+id/textPass2"
+            app:layout_constraintStart_toStartOf="@+id/textPass2"
+            app:layout_constraintTop_toBottomOf="@+id/textPass2"
+            tools:text="Имя пассажира" />
 
         <TextView
             android:id="@+id/passengerId"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp"
-            android:text="passengerId"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-        <TextView
-            android:id="@+id/fromStreet"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="fromStreet"
-            android:padding="10dp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large"/>
+            android:layout_marginEnd="8dp"
+            style="@style/textBoldForCardView"
+            app:layout_constraintBottom_toBottomOf="@+id/textPass2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textPass2"
+            tools:text="Id" />
 
-        <TextView
-            android:id="@+id/toStreet"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:text="toStreet"
-            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
-
-    </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

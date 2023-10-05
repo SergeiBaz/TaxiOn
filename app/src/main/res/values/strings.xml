@@ -25,4 +25,5 @@
     <string name="add_money_to_price">Добавить к цене</string>
     <string name="participate">Участвовать</string>
     <string name="minus_money">Минус деньги</string>
+    <string name="auction_number">Аукцион №</string>
 </resources>
