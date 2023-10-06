@@ -22,8 +22,11 @@
     <string name="change_trip">Изменить поездку</string>
     <string name="cancel_order">Отменить заказ</string>
     <string name="current_rate">Текущая ставка</string>
+    <string name="starting_bid">Начальная ставка</string>
     <string name="add_money_to_price">Добавить к цене</string>
     <string name="participate">Участвовать</string>
     <string name="minus_money">Минус деньги</string>
     <string name="auction_number">Аукцион №</string>
+    <string name="price">Цена</string>
+    <string name="message">Сообщение</string>
 </resources>

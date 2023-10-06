@@ -1,4 +1,4 @@
-package presentation.fragments.trip_fragment
+package presentation.fragments.driver_auction_fragment
 
 import androidx.fragment.app.Fragment
 

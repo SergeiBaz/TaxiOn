@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="presentation.fragments.trip_fragment.AuctionPassengerFragment">
+    tools:context="presentation.fragments.passenger_auction_fragment.PassengerAuctionFragment">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewInfoAuction"
@@ -12,7 +12,7 @@
         android:layout_marginStart="4dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="4dp"
-        app:cardCornerRadius="10dp"
+        style="@style/cardViewCornRadAndElev"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -67,6 +67,7 @@
                 android:layout_marginEnd="24dp"
                 android:text="@string/passenger"
                 android:textStyle="bold"
+                style="@style/textBoldForCardView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:ignore="TextSizeCheck" />
@@ -150,7 +151,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
-        app:cardCornerRadius="10dp"
+        style="@style/cardViewCornRadAndElev"
         app:layout_constraintEnd_toEndOf="@+id/cardViewInfoAuction"
         app:layout_constraintStart_toStartOf="@+id/cardViewInfoAuction"
         app:layout_constraintTop_toBottomOf="@+id/cardViewInfoAuction">
@@ -158,16 +159,16 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:cardCornerRadius="10dp">
+            >
 
             <TextView
                 android:id="@+id/rateTextView"
-                style=""
+                style="@style/textBoldForCardView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginEnd="4dp"
-                android:text="@string/current_rate"
+                android:text="@string/starting_bid"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -179,8 +180,7 @@
                 android:ems="10"
                 android:gravity="center"
                 android:inputType="time"
-                android:textSize="16sp"
-                android:textStyle="bold"
+                style="@style/textBoldForCardView"
                 app:layout_constraintBottom_toBottomOf="@+id/imageView3"
                 app:layout_constraintStart_toEndOf="@+id/imageView3"
                 app:layout_constraintTop_toTopOf="@+id/imageView3"
@@ -194,6 +194,7 @@
                 android:layout_marginBottom="8dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="@+id/rateTextView"
+                app:layout_constraintStart_toStartOf="@+id/rateTextView"
                 app:layout_constraintTop_toBottomOf="@+id/rateTextView"
                 tools:text="200p" />
 
@@ -216,7 +217,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="4dp"
-        app:cardCornerRadius="10dp"
+        style="@style/cardViewCornRadAndElev"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/cardViewInfoAuction"
         app:layout_constraintStart_toStartOf="@+id/cardViewInfoAuction"
@@ -225,7 +226,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewOffersDrivers"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:padding="5dp"/>
 
     </androidx.cardview.widget.CardView>
 
