@@ -5,50 +5,206 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="presentation.fragments.create_auction_fragment.CreateAuctionFragment">
-    <Button
-        android:id="@+id/createAuctionButton"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Create Auction"
-        app:layout_constraintEnd_toEndOf="@+id/editTextStreetTo"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="@+id/editTextStreetTo"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStreetTo" />
 
-    <EditText
-        android:id="@+id/editTextStreetFrom"
-        android:layout_width="wrap_content"
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewCreatAucti"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="32dp"
-        android:ems="11"
-        android:hint="Введите точку подачу"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="4dp"
+        style="@style/cardViewCornRadAndElev"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/editTextStreetTo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:ems="11"
-        android:hint="Введите конечную точку"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="@+id/editTextStreetFrom"
-        app:layout_constraintStart_toStartOf="@+id/editTextStreetFrom"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStreetFrom" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textViewRendering"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="@+id/createAuctionButton"
-        app:layout_constraintStart_toStartOf="@+id/createAuctionButton"
-        app:layout_constraintTop_toBottomOf="@+id/createAuctionButton" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/typeAuctionCardView"
+                style="@style/cardViewCornRadAndElev"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="4dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/typeTextView"
+                        style="@style/textBoldForCardView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginBottom="4dp"
+                        android:text="@string/type"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/horizontalScrollView"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <HorizontalScrollView
+                        android:id="@+id/horizontalScrollView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="4dp"
+                        android:foregroundGravity="center"
+                        app:layout_constraintBottom_toBottomOf="@+id/typeTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/typeTextView"
+                        app:layout_constraintVertical_bias="0.482">
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            app:singleLine="true"
+                            app:singleSelection="true">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/auctionChip"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:padding="5dp"
+                                android:text="@string/auction"
+                                android:textAlignment="center" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/firstChip"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="4dp"
+                                android:layout_marginBottom="8dp"
+                                android:padding="5dp"
+                                android:text="@string/first"
+                                android:textAlignment="center" />
+                        </com.google.android.material.chip.ChipGroup>
+                    </HorizontalScrollView>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                style="@style/cardViewCornRadAndElev"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/typeAuctionCardView"
+                app:layout_constraintStart_toStartOf="@+id/typeAuctionCardView"
+                app:layout_constraintTop_toBottomOf="@+id/typeAuctionCardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <Button
+                        android:id="@+id/createAuctionButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/create"
+                        style="@style/button_rounded"
+                        android:textAllCaps="false"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <EditText
+                        android:id="@+id/editTextStreetTo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ems="11"
+                        android:hint="Введите конечную точку"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        app:layout_constraintEnd_toEndOf="@+id/editTextStreetFrom"
+                        app:layout_constraintStart_toStartOf="@+id/editTextStreetFrom"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextStreetFrom" />
+
+                    <EditText
+                        android:id="@+id/editTextStreetFrom"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="4dp"
+                        android:ems="11"
+                        android:hint="Введите точку подачу"
+                        android:inputType="textPersonName"
+                        android:minHeight="48dp"
+                        app:circularflow_radiusInDP="10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textViewRendering"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toTopOf="@+id/createAuctionButton"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                    <EditText
+                        android:id="@+id/initialBidEditText"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ems="10"
+                        android:hint="Начальная ставка(мах цена)"
+                        android:inputType="text"
+                        app:layout_constraintEnd_toEndOf="@+id/editTextStreetTo"
+                        app:layout_constraintStart_toStartOf="@+id/editTextStreetTo"
+                        app:layout_constraintTop_toBottomOf="@+id/editTextStreetTo" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:gravity="center"
+                        android:padding="4dp"
+                        android:text="Время ставки"
+                        android:textSize="18sp"
+                        app:layout_constraintBottom_toBottomOf="@+id/timeEditText"
+                        app:layout_constraintStart_toStartOf="@+id/initialBidEditText"
+                        app:layout_constraintTop_toBottomOf="@+id/initialBidEditText" />
+
+                    <EditText
+                        android:id="@+id/timeEditText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:ems="10"
+                        android:gravity="center"
+
+                        android:hint="3 Мин"
+                        app:layout_constraintEnd_toEndOf="@+id/initialBidEditText"
+                        app:layout_constraintStart_toEndOf="@+id/textView2"
+                        app:layout_constraintTop_toBottomOf="@+id/initialBidEditText" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

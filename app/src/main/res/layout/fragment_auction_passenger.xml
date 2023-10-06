@@ -5,6 +5,22 @@
     android:layout_height="match_parent"
     tools:context="presentation.fragments.passenger_auction_fragment.PassengerAuctionFragment">
 
+    <Button
+        android:id="@+id/cancelAuctionButton"
+        style="@style/button_gray"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="4dp"
+        android:backgroundTint="#4EEBE7E7"
+        android:text="@string/cancel_order"
+        android:textColor="#C14941"
+        app:cornerRadius="@dimen/CornerRadius20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewInfoAuction"
         android:layout_width="match_parent"
@@ -23,12 +39,14 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardViewFromStreet"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
                 app:cardCornerRadius="10dp"
                 app:cardElevation="2dp"
+                app:layout_constraintEnd_toStartOf="@+id/PhotoPassengerImageView"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
@@ -83,52 +101,6 @@
                 app:layout_constraintTop_toBottomOf="@+id/textPass"
                 tools:text="Имя пассажира" />
 
-            <Button
-                android:id="@+id/changeAuctionButton"
-                style="@style/textTranslucent"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="#4EEBE7E7"
-                android:text="@string/change_trip"
-                android:textAllCaps="false"
-                android:textColor="#AF1A237E"
-                android:textSize="12sp"
-                app:cornerRadius="@dimen/CornerRadius20dp"
-                app:layout_constraintBottom_toBottomOf="@+id/cancelAuctionButton"
-                app:layout_constraintEnd_toStartOf="@+id/divider2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/cardViewToStreet" />
-
-            <Button
-                android:id="@+id/cancelAuctionButton"
-                style="@style/button_gray"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginEnd="8dp"
-                android:backgroundTint="#4EEBE7E7"
-                android:text="@string/cancel_order"
-                android:textColor="#C14941"
-                app:cornerRadius="@dimen/CornerRadius20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/divider2"
-                app:layout_constraintTop_toBottomOf="@+id/cardViewToStreet" />
-
-            <View
-                android:id="@+id/divider2"
-                android:layout_width="1dp"
-                android:layout_height="0dp"
-                android:alpha="0"
-                android:background="?android:attr/listDivider"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/PhotoPassengerImageView"
                 android:layout_width="48dp"
@@ -141,6 +113,36 @@
                 app:strokeColor="@color/black10"
                 app:strokeWidth="1dp"
                 tools:src="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/ratingNumberTextView3"
+                style="@style/textBoldForCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/raiting3"
+                app:layout_constraintStart_toEndOf="@+id/raiting3"
+                app:layout_constraintTop_toTopOf="@+id/raiting3"
+                tools:text="5.0" />
+
+            <ImageView
+                android:id="@+id/raiting3"
+                android:layout_width="15dp"
+                android:layout_height="0dp"
+                android:importantForAccessibility="no"
+                android:src="@android:drawable/btn_star_big_on"
+                app:layout_constraintStart_toEndOf="@+id/PhotoPassengerImageView"
+                app:layout_constraintTop_toBottomOf="@+id/passNametextView"
+                tools:ignore="ImageContrastCheck" />
+
+            <TextView
+                android:id="@+id/numberVotesTextView2"
+                style="@style/textTranslucent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/ratingNumberTextView3"
+                app:layout_constraintStart_toEndOf="@+id/ratingNumberTextView3"
+                app:layout_constraintTop_toTopOf="@+id/ratingNumberTextView3"
+                tools:text="(100)" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -213,12 +215,11 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewInfoDriver"
+        style="@style/cardViewCornRadAndElev"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginBottom="4dp"
-        style="@style/cardViewCornRadAndElev"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/cancelAuctionButton"
         app:layout_constraintEnd_toEndOf="@+id/cardViewInfoAuction"
         app:layout_constraintStart_toStartOf="@+id/cardViewInfoAuction"
         app:layout_constraintTop_toBottomOf="@+id/cardViewInfoTimeAuction">
@@ -227,7 +228,7 @@
             android:id="@+id/recyclerViewOffersDrivers"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:padding="5dp"/>
+            android:padding="5dp" />
 
     </androidx.cardview.widget.CardView>
 

@@ -29,4 +29,8 @@
     <string name="auction_number">Аукцион №</string>
     <string name="price">Цена</string>
     <string name="message">Сообщение</string>
+    <string name="type">Тип:</string>
+    <string name="auction">Аукцион</string>
+    <string name="first">Первый</string>
+    <string name="create">Создать</string>
 </resources>
