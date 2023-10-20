@@ -9,7 +9,7 @@ class CreateAuctionUseCase(
 ) {
     suspend operator fun invoke(
         streetFrom: String,
-        streetTo: String
+        streetTo: String,
     ): Auction? {
         val addressFrom = Address(streetFrom)
         val addressTo = Address(streetTo)

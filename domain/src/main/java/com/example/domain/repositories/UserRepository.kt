@@ -8,6 +8,5 @@ import kotlinx.coroutines.flow.Flow
 
 @ExperimentalCoroutinesApi
 interface UserRepository {
-
     suspend fun registerUser(userAuth: UserAuth) : Flow<Response<Boolean>>
 }

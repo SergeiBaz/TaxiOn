@@ -6,6 +6,9 @@ class Auction(
 ) {
     val id: Int = 0
     val passengerId: String = ""
+    val lifeTime: String = ""
+    val currentBid: String = ""
+    val created: String = ""
     val candidateIdCollection: MutableList<String> = ArrayList()
     val candidates: MutableList<Driver> = ArrayList()
     fun addCandidate(driver: Driver) {

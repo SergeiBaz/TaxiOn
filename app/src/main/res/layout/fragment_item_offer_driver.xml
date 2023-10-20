@@ -19,7 +19,7 @@
             android:layout_height="48dp"
             android:layout_marginStart="8dp"
             android:padding="1dp"
-            app:layout_constraintBottom_toTopOf="@+id/NumberVotesTextView"
+            app:layout_constraintBottom_toTopOf="@+id/numberVotesTextView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/brandCarTextView"
             app:shapeAppearanceOverlay="@style/circle"
@@ -70,7 +70,7 @@
             tools:text="5.0" />
 
         <TextView
-            android:id="@+id/NumberVotesTextView"
+            android:id="@+id/numberVotesTextView"
             style="@style/textTranslucent"
             android:layout_width="wrap_content"
             android:layout_height="0dp"
@@ -81,7 +81,7 @@
             tools:text="(100)" />
 
         <TextView
-            android:id="@+id/priceTripTextView"
+            android:id="@+id/bidTripTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -97,46 +97,71 @@
             android:id="@+id/acceptButton"
             style="@style/textBoldForCardView"
             android:layout_width="0dp"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginBottom="10dp"
-            android:backgroundTint="@color/color_accept_button"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/color_button_user_choice"
             android:text="@string/accept"
-            android:textSize="12sp"
+            android:textSize="10sp"
             app:cornerRadius="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/divider"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/raiting" />
+
+        <Button
+            android:id="@+id/offerButton"
+            style="@style/textBoldForCardView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:backgroundTint="@color/gray_button"
+            android:text="@string/offer"
+            android:textSize="10sp"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/acceptButton" />
 
         <Button
             android:id="@+id/canselButton"
             style="@style/textBoldForCardView"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
             android:backgroundTint="@color/color_refuse_button"
             android:text="@string/refuse"
-            android:textSize="12sp"
+            android:textSize="10sp"
             app:cornerRadius="20dp"
-            app:layout_constraintBottom_toBottomOf="@+id/acceptButton"
+            app:layout_constraintBottom_toBottomOf="@+id/offerButton"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/divider"
-            app:layout_constraintTop_toBottomOf="@+id/raiting"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/offerButton"
             tools:ignore="TouchTargetSizeCheck" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="1dp"
-            android:layout_height="0dp"
-            android:layout_gravity="center"
-            android:alpha="0"
-            android:background="?android:attr/listDivider"
-            app:layout_constraintBottom_toBottomOf="@+id/canselButton"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.333"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.666"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 

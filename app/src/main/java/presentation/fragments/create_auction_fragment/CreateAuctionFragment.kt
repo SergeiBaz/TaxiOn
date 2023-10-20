@@ -24,14 +24,15 @@ class CreateAuctionFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.uiState.observe(viewLifecycleOwner) {
+        viewModel.currentAuctionState.observe(viewLifecycleOwner) {
             binding.textViewRendering.text = it
         }
         binding.apply {
             createAuctionButton.setOnClickListener {
                 viewModel.createAuction(
-                    editTextStreetFrom.text.toString(),
-                    editTextStreetTo.text.toString()
+                    streetFrom.text.toString(),
+                    streetTo.text.toString(),
+
                 )
             }
         }

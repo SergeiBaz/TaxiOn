@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.domain.entities.Auction
 import com.example.taxion.databinding.FragmentAuctionItemBinding
 
-class AuctionItemAdapter(val listener: Listener) :
+class AuctionItemAdapter(private val listener: Listener) :
     RecyclerView.Adapter<AuctionItemAdapter.AuctionViewHolder>() {
     private var auctionList: List<Auction> = ArrayList()
 
