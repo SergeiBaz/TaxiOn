@@ -15,14 +15,15 @@ class CreateAuctionViewModel @Inject constructor
     (
     private val createAuctionUseCase: CreateAuctionUseCase
     ) : ViewModel() {
-    private val _currentAuctionState = MutableLiveData<String>()
-    val currentAuctionState: LiveData<String> = _currentAuctionState
+    private val _currentAuctionState = MutableLiveData<Auction>()
+    val currentAuctionState: LiveData<Auction> = _currentAuctionState
 
     fun createAuction(from: String, to: String) {
         CoroutineScope(Dispatchers.IO).launch {
             val auction = createAuctionUseCase(from, to)
             withContext(Dispatchers.Main) {
-                _currentAuctionState.value = auction?.to?.street
+                _currentAuctionState.value = auction!!
+
                 Log.d("Log", "${auction?.from?.street}")
                 Log.d("Log", "${auction?.to?.street}")
             }

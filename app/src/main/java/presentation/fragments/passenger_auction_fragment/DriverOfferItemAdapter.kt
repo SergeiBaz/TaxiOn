@@ -31,7 +31,7 @@ class DriverOfferItemAdapter :
             nameDrivertextView.text = driverOffer.user.name
             ratingNumberTextView.text = driverOffer.user.rating
             numberVotesTextView.text = driverOffer.user.numberVotes
-            priceTripTextView.text = TODO("Цена поездки нужна тут")
+            bidTripTextView.text = TODO("Цена поездки нужна тут")
         }
     }
 

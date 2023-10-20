@@ -26,10 +26,10 @@ class UserChoiceFragment : Fragment() {
         val controller = findNavController()
         binding.apply {
             ButtonPassenger.setOnClickListener {
-                controller.navigate(R.id.tripFragment)
+                controller.navigate(R.id.fragmentCreateAuction)
             }
             ButtonDriver.setOnClickListener {
-                controller.navigate(R.id.lobbyFragment)
+
             }
         }
     }

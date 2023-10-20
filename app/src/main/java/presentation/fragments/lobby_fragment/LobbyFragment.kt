@@ -12,6 +12,7 @@ import com.example.domain.entities.Auction
 import com.example.taxion.R
 import com.example.taxion.databinding.FragmentLobbyBinding
 import dagger.hilt.android.AndroidEntryPoint
+import presentation.Constants.Constants
 
 @AndroidEntryPoint
 class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
@@ -41,7 +42,7 @@ class LobbyFragment : Fragment(), AuctionItemAdapter.Listener {
     override fun onClick(auction: Auction) {
         val controller = findNavController()
         val bundle = Bundle()
-        bundle.putInt("id", auction.id)
-        controller.navigate(R.id.auctionFragment, bundle)
+        bundle.putInt(Constants.KEY_ID_AUCTION, auction.id)
+        /*controller.navigate(R.id.auctionFragment, bundle)*/
     }
 }

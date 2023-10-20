@@ -29,20 +29,21 @@
             android:id="@+id/action_userChoiceFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
         <action
-            android:id="@+id/action_userChoiceFragment_to_lobbyFragment"
-            app:destination="@id/lobbyFragment" />
-        <action
             android:id="@+id/action_userChoiceFragment_to_fragmentCreateAuction"
             app:destination="@id/fragmentCreateAuction" />
         <action
-            android:id="@+id/action_userChoiceFragment_to_tripFragment"
-            app:destination="@id/tripFragment" />
+            android:id="@+id/action_userChoiceFragment_to_lobbyFragment"
+            app:destination="@id/lobbyFragment" />
     </fragment>
     <fragment
         android:id="@+id/fragmentCreateAuction"
         android:name="presentation.fragments.create_auction_fragment.CreateAuctionFragment"
         android:label="fragment_create_auction"
-        tools:layout="@layout/fragment_create_auction" />
+        tools:layout="@layout/fragment_create_auction" >
+        <action
+            android:id="@+id/action_fragmentCreateAuction_to_passengerAuctionFragment"
+            app:destination="@id/passengerAuctionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="presentation.fragments.login_fragment.LoginFragment"
@@ -53,26 +54,35 @@
             app:destination="@id/registerFragment" />
     </fragment>
     <fragment
-        android:id="@+id/auctionFragment"
-        android:name="presentation.fragments.auction_fragment.AuctionFragment"
-        android:label="fragment_auction"
-        tools:layout="@layout/fragment_auction"/>
-    <fragment
-        android:id="@+id/lobbyFragment"
-        android:name="presentation.fragments.lobby_fragment.LobbyFragment"
-        android:label="fragment_lobby"
-        tools:layout="@layout/fragment_lobby">
-        <action
-            android:id="@+id/action_lobbyFragment_to_auctionFragment"
-            app:destination="@id/auctionFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/registerFragment"
         android:name="presentation.fragments.register_fragment.RegisterFragment"
         android:label="RegisterFragment" />
     <fragment
-        android:id="@+id/tripFragment"
+        android:id="@+id/passengerAuctionFragment"
         android:name="presentation.fragments.passenger_auction_fragment.PassengerAuctionFragment"
+        android:label="fragment_auction_passenger"
+        tools:layout="@layout/fragment_auction_passenger" >
+        <action
+            android:id="@+id/action_passengerAuctionFragment_to_tripFragment"
+            app:destination="@id/tripFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/driverAuctionFragment"
+        android:name="presentation.fragments.driver_auction_fragment.DriverAuctionFragment"
+        android:label="fragment_driver_auction"
+        tools:layout="@layout/fragment_driver_auction" />
+    <fragment
+        android:id="@+id/tripFragment"
+        android:name="presentation.fragments.trip_fragment.TripFragment"
         android:label="fragment_trip"
-        tools:layout="@layout/fragment_auction_passenger" />
+        tools:layout="@layout/fragment_trip" />
+    <fragment
+        android:id="@+id/lobbyFragment"
+        android:name="presentation.fragments.lobby_fragment.LobbyFragment"
+        android:label="fragment_lobby"
+        tools:layout="@layout/fragment_lobby" >
+        <action
+            android:id="@+id/action_lobbyFragment_to_driverAuctionFragment"
+            app:destination="@id/driverAuctionFragment" />
+    </fragment>
 </navigation>
