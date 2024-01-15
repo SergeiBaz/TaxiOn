@@ -9,7 +9,7 @@
         app:argType="integer" />
     <fragment
         android:id="@+id/splashFragment"
-        android:name="presentation.fragments.SplashFragment"
+        android:name="ui.fragments.splash_fragment.SplashFragment"
         android:label="fragment_splash"
         tools:layout="@layout/fragment_splash">
         <action
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/userChoiceFragment"
-        android:name="presentation.fragments.UserChoiceFragment"
+        android:name="ui.fragments.UserChoiceFragment"
         android:label="fragment_user_choice"
         tools:layout="@layout/fragment_user_choice">
         <action
@@ -38,12 +38,12 @@
     </fragment>
     <fragment
         android:id="@+id/splashScreenFragment"
-        android:name="presentation.fragments.create_auction_fragment.CreateAuctionFragment"
+        android:name="ui.fragments.create_auction_fragment.CreateAuctionFragment"
         android:label="fragment_splash_screen"
         tools:layout="@layout/fragment_create_auction" />
     <fragment
         android:id="@+id/loginFragment"
-        android:name="presentation.fragments.login_fragment.LoginFragment"
+        android:name="ui.fragments.splash_fragment.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -52,7 +52,7 @@
     </fragment>
     <fragment
         android:id="@+id/auctionFragment"
-        android:name="presentation.fragments.auction_fragment.AuctionFragment"
+        android:name="ui.fragments.auction_fragment.AuctionFragment"
         android:label="fragment_auction"
         tools:layout="@layout/fragment_auction">
     <action
@@ -73,7 +73,7 @@
     </fragment>
     <fragment
         android:id="@+id/lobbyFragment"
-        android:name="presentation.fragments.lobby_fragment.LobbyFragment"
+        android:name="ui.fragments.lobby_fragment.LobbyFragment"
         android:label="fragment_lobby"
         tools:layout="@layout/fragment_lobby">
         <action
@@ -82,6 +82,6 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="presentation.fragments.register_fragment.RegisterFragment"
+        android:name="ui.fragments.register_fragment.RegisterFragment"
         android:label="RegisterFragment" />
 </navigation>

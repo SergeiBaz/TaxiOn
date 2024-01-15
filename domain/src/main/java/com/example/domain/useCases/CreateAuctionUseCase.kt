@@ -1,6 +1,6 @@
 package com.example.domain.useCases
 
-import com.example.domain.entities.Address
+import com.example.domain.model.Address
 import com.example.domain.entities.Auction
 import com.example.domain.repositories.AuctionsRepository
 

@@ -1,8 +1,8 @@
 package com.example.data.storage.firebase
 
 import com.example.data.storage.interfaces.UserAuthStorage
-import com.example.domain.entities.Response
-import com.example.domain.entities.UserAuth
+import com.example.domain.model.Response
+import com.example.domain.model.UserAuth
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.cancel
